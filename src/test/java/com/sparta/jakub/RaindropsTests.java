@@ -19,7 +19,13 @@ public class RaindropsTests {
         @DisplayName("Testing  output return only Pling")
         void testingOutputReturnOnlyPling(int number) {
             Assertions.assertEquals("Pling", raindrops.plingPlangPlong(number));
+        }
 
+        @ParameterizedTest
+        @ValueSource(ints = {-20, -10, -5, 5, 10, 20})
+        @DisplayName("Testing output return only Plang")
+        void testingOutputReturnOnlyPlang(int number) {
+            Assertions.assertEquals("Plang", raindrops.plingPlangPlong(number));
         }
     }
 }

@@ -69,4 +69,16 @@ public class RaindropsTests {
             Assertions.assertEquals("PlingPlangPlong", raindrops.plingPlangPlong(number));
         }
     }
-}
+
+    @Nested
+    @DisplayName("Testing for numbers without any factor of 3, 5, 7")
+    class testingForNumbersWithoutAnyFactor {
+
+
+        @ParameterizedTest
+        @ValueSource(ints = {-68, -227, -331})
+        @DisplayName("Testing output return String value of number for numbers lower than 0")
+        void testingOutputReturnStringValueOfNumberForNumbersLowerThan0(int number) {
+            Assertions.assertEquals(String.valueOf(number), raindrops.plingPlangPlong(number));
+        }
+    }

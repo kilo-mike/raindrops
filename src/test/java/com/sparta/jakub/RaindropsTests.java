@@ -35,4 +35,16 @@ public class RaindropsTests {
             Assertions.assertEquals("Plong", raindrops.plingPlangPlong(number));
         }
     }
+
+    @Nested
+    @DisplayName("Testing for multiple return")
+    class testingForMultipleReturn {
+
+
+        @ParameterizedTest
+        @ValueSource(ints = {-90, -45, -15, 15, 45, 90})
+        @DisplayName("Testing output return PlingPlang")
+        void testingOutputReturnPlingPlang(int number) {
+            Assertions.assertEquals("PlingPlang", raindrops.plingPlangPlong(number));
+        }
 }

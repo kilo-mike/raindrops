@@ -47,4 +47,12 @@ public class RaindropsTests {
         void testingOutputReturnPlingPlang(int number) {
             Assertions.assertEquals("PlingPlang", raindrops.plingPlangPlong(number));
         }
+
+        @ParameterizedTest
+        @ValueSource(ints = {-84, -42, -21, 21, 42, 84})
+        @DisplayName("Testing output return PlingPlong")
+        void testingOutputReturnPlingPlong(int number) {
+            Assertions.assertEquals("PlingPlong", raindrops.plingPlangPlong(number));
+        }
+    }
 }

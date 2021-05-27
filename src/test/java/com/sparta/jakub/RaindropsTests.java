@@ -81,4 +81,12 @@ public class RaindropsTests {
         void testingOutputReturnStringValueOfNumberForNumbersLowerThan0(int number) {
             Assertions.assertEquals(String.valueOf(number), raindrops.plingPlangPlong(number));
         }
+
+        @ParameterizedTest
+        @ValueSource(ints = {89, 127, 746})
+        @DisplayName("Testign output return String value of number for numbers greater than 0")
+        void testignOutputReturnStringValueOfNumberForNumbersGreaterThan0(int number) {
+            Assertions.assertEquals(String.valueOf(number), raindrops.plingPlangPlong(number));
+        }
     }
+}

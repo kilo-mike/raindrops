@@ -3,6 +3,7 @@ package com.sparta.jakub;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -87,6 +88,13 @@ public class RaindropsTests {
         @DisplayName("Testign output return String value of number for numbers greater than 0")
         void testignOutputReturnStringValueOfNumberForNumbersGreaterThan0(int number) {
             Assertions.assertEquals(String.valueOf(number), raindrops.plingPlangPlong(number));
+        }
+
+        @Test
+        @DisplayName("Testing output return String value of 0 for input 0")
+        void testingOutputReturnStringValueOf0ForInput0() {
+            Assertions.assertEquals(String.valueOf(0), raindrops.plingPlangPlong(0));
+
         }
     }
 }

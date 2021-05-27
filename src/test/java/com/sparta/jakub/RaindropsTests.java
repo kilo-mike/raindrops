@@ -27,5 +27,12 @@ public class RaindropsTests {
         void testingOutputReturnOnlyPlang(int number) {
             Assertions.assertEquals("Plang", raindrops.plingPlangPlong(number));
         }
+
+        @ParameterizedTest
+        @ValueSource(ints = {-28, -14, -7, 7, 14, 28})
+        @DisplayName("Testing output return only Plong")
+        void testingOutputReturnOnlyPlong(int number) {
+            Assertions.assertEquals("Plong", raindrops.plingPlangPlong(number));
+        }
     }
 }

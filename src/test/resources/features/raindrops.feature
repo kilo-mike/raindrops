@@ -1,4 +1,4 @@
-Feature: Checking if raindrops app works correctly
+Feature: The generator produces a response based on the parameters passed
 
   Scenario: Given number that is a factor of 3
 
